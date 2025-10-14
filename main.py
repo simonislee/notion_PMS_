@@ -18,7 +18,7 @@ def main():
     # get all active lease
     active_lease = get_lease()
     today = datetime.date.today()
-    target_date = today + datetime.timedelta(days=3)  # 2025-10-17
+    target_date = today + datetime.timedelta(days=3)
 
     # Ensure 'Next Payment Date' is in datetime format (adjust column name if needed)
     active_lease['Next Payment Date'] = pd.to_datetime(active_lease['Next Payment Date'],
@@ -36,7 +36,6 @@ def main():
             "lease": [row['Page ID']],  # get the lease page id
             'Due Date': row['Next Payment Date'].strftime("%Y-%m-%d"),  # get the next due day from lease database
             'Rent Amount': row['Monthly Rent'],  # get the rent Amount
-            'Status': 'Unpaid',
             'Payment Method': 'Cash',
         }
         print(dict_payment)
