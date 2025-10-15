@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 0 * * *' # Runs at midnight UTC
   workflow_dispatch: # Allows manual trigger
+  
+permissions:
+  contents: read # Required for checkout
+  
 jobs:
   run-script:
     runs-on: ubuntu-latest
