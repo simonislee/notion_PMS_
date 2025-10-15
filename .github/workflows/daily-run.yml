@@ -1,9 +1,8 @@
 name: Run Python Script Daily
 on:
   schedule:
-    - cron: '*/3 * * * *' # Runs at midnight UTC
-  workflow_dispatch: # RE-ENABLED - you NEED this!
-  # workflow_dispatch: # Allows manual trigger
+    - cron: '*/5 * * * *' # Runs at midnight UTC
+  workflow_dispatch: # Allows manual trigger
 
 permissions:
   contents: read # REQUIRED!
