@@ -1,5 +1,3 @@
-from datetime import datetime
-
 import pandas as pd
 from notion_client import Client
 
@@ -119,7 +117,8 @@ def lease_change_next_payment_date(page_id: str, next_payment_date: str):
 
 
 if __name__ == '__main__':
-    next_payment = datetime.today().strftime("%Y-%m-%d")
-    print(next_payment)
+    # next_payment = datetime.today().strftime("%Y-%m-%d")
+    # print(next_payment)
     # lease_change_next_payment_date(page_id='287151d118e78079be36fac0cc133ffc', next_payment_date=next_payment)
     get_lease()
+    pass
