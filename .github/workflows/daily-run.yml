@@ -20,4 +20,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run script
         run: python main.py
+      - name: Print context
+        run: |
+          echo "event: ${{ github.event_name }}"
+          date -u
 
